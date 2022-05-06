@@ -5,7 +5,6 @@ The purpose of this software is to demonstrate rhythmicity detection of circadia
 - minpack.lm v1.2-1
 - Snowfall v1.84-6.1
 - doParallel v1.016
-- AWfisher https://github.com/Caleb-Huo/AWFisher
 - *This code has been tested on R version 4.0.2 
 
 ## Initialization Instructions: 
