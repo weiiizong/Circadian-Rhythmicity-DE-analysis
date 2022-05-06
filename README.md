@@ -24,7 +24,7 @@ Install required packages listed above.
 - Race.Label: sample race, used as a covariate candidate in DE analysis. 
 - RIN_C: RIN value in caudate, used as a covariate candidate in DE analysis. 
 
-## Expression Data (Example_data.csv)::  
+## Expression Data (Example_data.csv): 
 - 15041 genes (all genes that were used in the full analysis of caudate region in the paper)
 - Data has already been filtered according to method discussed in the paper 
 - Expression units are in log2 CPM 
@@ -38,7 +38,7 @@ Install required packages listed above.
 *NOTE: Each method requires permutation. Permutations were set to 10 to save time and computation space. Permuted files are included in the DE (output/DE_output/DE_null) and Rhythmicity (output/Rhythmicity_null_control, output/Rhythmicity_null_psychosis and output/ChangeRhyth_null_psychosis_control) folders to save reviewers time. If permutation files are recreated by the reviewer, output will be slightly different due to the randomness of permutation.
 
 
-## Expected output:
+## Expected Output:
 - output/observed_para_control.csv: the example output of curve fitting parameters and p-values. 
 - output/CorePlots: PDF plots of selective core circadian genes.
 - output/ChangeRhyth_psychosisVScontrol.csv: the example output of differential rhythmicity parameters (e.g., R^2 (control) - R^2 (psychosis)) and p-values.
