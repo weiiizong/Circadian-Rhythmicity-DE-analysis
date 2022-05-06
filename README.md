@@ -1,5 +1,5 @@
 # Circadian Analysis: Rhythmicity detection and DE analysis
-The purpose of this software is to demonstrate rhythmicity detection of circadian patterns in gene expression profiles as well as differential expression (DE) analysis using a linear model with gene specific covariate selection. Full analysis using this code can be found in the paper: Diurnal alterations in gene expression across the human dorsal and ventral striatum in psychosis (Ketchesin et Al., in review)
+The purpose of this software is to demonstrate rhythmicity detection of circadian patterns in gene expression profiles as well as differential expression (DE) analysis using a linear model with gene specific covariate selection. Full analysis using this code can be found in the paper: Diurnal alterations in gene expression across the human dorsal and ventral striatum in psychosis (Ketchesin et al., in review)
 
 ## Required R packages: 
 - minpack.lm v1.2-1
