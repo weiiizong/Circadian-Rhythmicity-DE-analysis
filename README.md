@@ -1,18 +1,17 @@
 # Circadian Analysis: Rhythmicity detection and DE analysis
 The purpose of this software is to demonstrate rhythmicity detection of circadian patterns in gene expression profiles as well as differential expression (DE) analysis using a linear model with gene specific covariate selection. Full analysis using this code can be found in the paper: Diurnal alterations in gene expression across the human dorsal and ventral striatum in psychosis (Ketchesin et al., in review)
 
-## Required R packages: 
+## Required R Packages: 
 - minpack.lm v1.2-1
 - Snowfall v1.84-6.1
 - doParallel v1.016
 - *This code has been tested on R version 4.0.2 
 
-## Initialization Instructions: 
-Download and unzip the folders to the your working directory. 
-Save each folder to the desktop
-code/: code for analysis demostration
-ouput/: results generated from code in code/
-Install required packages listed above.
+## Preparation Instructions: 
+Install required packages listed above. Download and unzip this repository to the your working directory. It should include the following folders:
+- code/: code for analysis demostration
+- data/: example data used in code/script.R
+- ouput/: results generated from code in code/
 
 ## Clinical Data (Example_clinical.csv):
 72 subjects (36 psychosis + 36 matched controls). Clinical variables of interest include:
