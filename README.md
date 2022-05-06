@@ -30,8 +30,6 @@ Install required packages listed above.
 - Data has already been filtered according to method discussed in the paper 
 - Expression units are in log2 CPM 
 
-## Fitted estimates data (Example_observed_NAc.csv and Example_observed_Caudate.csv):
-- Observed fitted estimates in NAc and Caudate regions used in paper for phase concordance plots demostration.
 
 ## Demo:
 - fitSinCurve.R and Curve_Drawing_axis.R are external functions required to run the rhythmicity analysis.
