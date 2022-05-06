@@ -1,9 +1,9 @@
-##Rhythmicity analysis
+####Rhythmicity analysis####===========================================
 rm(list=ls())
-WD = "/path_to_example_data_and_code_folder"
+WD = "/path_to_unzipped_folder"
 setwd(WD)
-data = read.csv("Example_data.csv", row.names = 1)
-clinical = read.csv("Example_clinical.csv",row.names = 1)
+data = read.csv(paste0(WD,'/data/Example_data.csv'), row.names = 1)
+clinical = read.csv(paste0(WD,'/data/Example_clinical.csv'),row.names = 1)
 
 psychosis.index = which(clinical$Diagnosis == "PSYCHOSIS")
 control.index = which(clinical$Diagnosis == "CONTROL")
@@ -25,7 +25,7 @@ all(names(tod.psychosis) == colnames(sub.data.psychosis))
 all(names(tod.control) == colnames(sub.data.control))
 
 
-### 1. Rhythmicity analysis on psychosis subjects
+### 1. Rhythmicity analysis on psychosis subjects--------
 library('minpack.lm')
 source(paste0(WD,'/code/fitSinCurve.R'))
 observed_p = data.frame(genes=genes,A=numeric(n), phase=numeric(n), offset=numeric(n), peak=numeric(n), R2=numeric(n))
@@ -107,7 +107,7 @@ observed_p$pvalue = R2Rank_para
 observed_p$qvalue = p.adjust(observed_p$pvalue, 'BH')
 write.csv(observed_p,file =  paste0(WD,'/output/observed_para_psychosis.csv'))
 
-### 2. Rhythmicity analysis on control subjects
+### 2. Rhythmicity analysis on control subjects----------------------
 library('minpack.lm')
 source(paste0(WD,'/code/fitSinCurve.R'))
 observed_c = data.frame(genes=genes,A=numeric(n), phase=numeric(n), offset=numeric(n), peak=numeric(n), R2=numeric(n))
@@ -190,7 +190,7 @@ observed_c$qvalue = p.adjust(observed_c$pvalue, 'BH')
 write.csv(observed_c,file =  paste0(WD,'/output/observed_para_control.csv'))
 
 
-## 3. Change of rhythmicity analysis
+## 3. Change of rhythmicity analysis-------------------
 tod = c(tod.psychosis, tod.control)
 
 nullFolder = paste0(WD,"/output/ChangeRhyth_null_psychosis_control")
@@ -270,12 +270,12 @@ rthmicChange = data.frame(genes=observe_ctrl$gene,
 write.csv(rthmicChange,paste0(WD,"/output/ChangeRhyth_psychosisVScontrol.csv"))
 
 
-## DE analysis
+#### DE analysis ####============================================================
 rm(list=ls())
 WD = "/path_to_example_data_and_code_folder"
 setwd(WD)
-data = read.csv("Example_data.csv", row.names = 1)
-clinical = read.csv("Example_clinical.csv",row.names = 1)
+data = read.csv(paste0(WD,'/data/Example_data.csv'), row.names = 1)
+clinical = read.csv(paste0(WD,'/data/Example_clinical.csv'),row.names = 1)
 all(clinical$pair == colnames(data))
 
 # #Day subjects and night subjects used in paper are selected by the index.d and index.n below. 
